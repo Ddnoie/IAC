@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="max.ar.demo.java.camera.CameraActivity">
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/surfaceview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="top" />
+
+    <SeekBar
+        android:id="@+id/rotationSeekBar"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/scaleSeekBar"
+        android:layout_alignParentEnd="true"
+        android:max="360"
+        android:min="0"
+        android:progress="0" />
+
+    <SeekBar
+        android:id="@+id/scaleSeekBar"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:max="100"
+        android:min="1"
+        android:progress="20" />
+
+    <TextView
+        android:id="@+id/wordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="@color/red"
+        tools:layout_editor_absoluteX="315dp"
+        tools:layout_editor_absoluteY="4dp" />
+
+    <RelativeLayout
+        android:id="@+id/img_env_texture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/wordTextView"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/img_env_texture_top"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="64dp" />
+
+        <ImageView
+            android:id="@+id/img_env_texture_left"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_below="@id/img_env_texture_top" />
+
+        <ImageView
+            android:id="@+id/img_env_texture_front"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_below="@id/img_env_texture_top"
+            android:layout_toRightOf="@id/img_env_texture_left" />
+
+        <ImageView
+            android:id="@+id/img_env_texture_right"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_below="@id/img_env_texture_top"
+            android:layout_toRightOf="@id/img_env_texture_front" />
+
+        <ImageView
+            android:id="@+id/img_env_Texture_back"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_below="@id/img_env_texture_top"
+            android:layout_toRightOf="@id/img_env_texture_right" />
+
+        <ImageView
+            android:id="@+id/img_env_texture_bottom"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_below="@id/img_env_texture_left"
+            android:layout_toRightOf="@id/img_env_texture_left"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/searchingTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="546dp"
+        android:layout_marginBottom="403dp"
+        android:gravity="center"
+        android:text="Please move the mobile phone slowly to find the plane"
+        android:textColor="#ffffff"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="512dp" />
+
+    <TextView
+        android:id="@+id/plane_other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plane_other"
+        android:visibility="gone"
+        android:rotation="180"
+        android:textColor="#ff2211"
+        tools:layout_editor_absoluteX="315dp"
+        tools:layout_editor_absoluteY="4dp" />
+    <TextView
+        android:id="@+id/plane_floor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plane_floor"
+        android:visibility="gone"
+        android:rotation="180"
+        android:textColor="#ff2211"
+        tools:layout_editor_absoluteX="315dp"
+        tools:layout_editor_absoluteY="4dp" />
+    <TextView
+        android:id="@+id/plane_wall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plane_wall"
+        android:visibility="gone"
+        android:rotation="180"
+        android:textColor="#ff2211"
+        tools:layout_editor_absoluteX="315dp"
+        tools:layout_editor_absoluteY="4dp" />
+    <TextView
+        android:id="@+id/plane_table"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plane_table"
+        android:visibility="gone"
+        android:rotation="180"
+        android:textColor="#ff2211"
+        tools:layout_editor_absoluteX="315dp"
+        tools:layout_editor_absoluteY="4dp" />
+    <TextView
+        android:id="@+id/plane_seat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plane_seat"
+        android:visibility="gone"
+        android:rotation="180"
+        android:textColor="#ff2211"
+        tools:layout_editor_absoluteX="315dp"
+        tools:layout_editor_absoluteY="4dp" />
+    <TextView
+        android:id="@+id/plane_ceiling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plane_ceiling"
+        android:visibility="gone"
+        android:rotation="180"
+        android:textColor="#ff2211"
+        tools:layout_editor_absoluteX="315dp"
+        tools:layout_editor_absoluteY="4dp" />
+
+    <TextView
+        android:id="@+id/plane_door"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plane_door"
+        android:visibility="gone"
+        android:rotation="180"
+        android:textColor="#ff2211"
+        tools:layout_editor_absoluteX="315dp"
+        tools:layout_editor_absoluteY="4dp" />
+
+    <TextView
+        android:id="@+id/plane_window"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plane_window"
+        android:visibility="gone"
+        android:rotation="180"
+        android:textColor="#ff2211"
+        tools:layout_editor_absoluteX="315dp"
+        tools:layout_editor_absoluteY="4dp" />
+
+    <TextView
+        android:id="@+id/plane_bed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plane_bed"
+        android:visibility="gone"
+        android:rotation="180"
+        android:textColor="#ff2211"
+        tools:layout_editor_absoluteX="315dp"
+        tools:layout_editor_absoluteY="4dp" />
+
+    <TextView
+        android:id="@+id/target_measure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plane_other"
+        android:visibility="gone"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="315dp"
+        tools:layout_editor_absoluteY="4dp" />
+
+    <LinearLayout
+        android:id="@+id/canceling_inspect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/spinner_object_choose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/objects" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:checked="false"
+                android:text="Delete Object"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_take_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Take photo"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
